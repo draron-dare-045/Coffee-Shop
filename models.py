@@ -21,9 +21,8 @@ class Customer():
         return list ({order.coffee for order in self.orders()})
     
     def create_order( self, coffee, price):
-        return (self, coffee, price)
+        return Order(self, coffee, price)
     
-from order import Order
 class Coffee:
     def __init__(self, name):
         if not isinstance(name, str):
@@ -54,9 +53,6 @@ class Coffee:
         if not orders:
             return 0
         return sum(order.price for order in orders) / len(orders)
-
-from customer import Customer
-from coffee import Coffee
 
 class Order:
     _all_orders = []
