@@ -1,5 +1,6 @@
 class Coffee:
     
+    _all_coffees = []
     # Initialize 
     def __init__(self, name):
         # Checks if the data type of the name is a string if not throws an error
@@ -41,3 +42,7 @@ class Coffee:
         if not orders:
             return 0
         return sum(order.price for order in orders) / len(orders)
+    
+    @classmethod
+    def all(cls):
+        return cls._all_coffees

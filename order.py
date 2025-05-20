@@ -29,7 +29,7 @@ class Order:
 
     # Returns the value of the private attribute _coffee using the @property decorator
     @property
-    def coffee(self, value):
+    def coffee(self):
         return self._coffee
 
     # Returns the value of the private attribute _price using the @property decorator
